@@ -1,38 +1,225 @@
 .App {
-  text-align: center;
+  background: #2bbed3;
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Home {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  & button {
+    border: none;
+    font-size: 12rem;
+    background: #2bbed3;
+    color: white;
+    font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+    font-weight: bold;
+    cursor: pointer;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.Atm {
+  height: 100vh;
+  background: #2bbed3;
+  color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+
+  & h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  & .input-box {
+    border-right: 1px solid white;
+    display: flex;
+
+    & p {
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+      padding-right: 20px;
+    }
+  }
+}
+
+.keypad {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+
+  & .empty-key {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.key {
+  background: #2bbed3;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: #2bbed3;
+  }
+}
+
+.submit {
+  width: 200px;
+  border-radius: 1em;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.depositing {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+
+  & h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.depositing-amount {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.back-arrow {
+  align-self: self-start;
+
+  & button {
+    background: #2bbed3;
+    font-family: Calibri;
+    margin: 50px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+  }
+}
+
+.money {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  width: 80%;
+}
+
+.currency {
+  border: 1px solid white;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  height: 100px;
+  width: 350px;
+
+  & p {
+    font-size: 30px;
+  }
+}
+
+.currencyInnerStyle {
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.currencyOuterStyle {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.thank-you {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  & p {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .Home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & button {
+      font-size: 4rem;
+    }
+  }
+
+  .back-arrow {
+    & button {
+      margin: 20px;
+    }
+  }
+
+  .currency {
+    padding: 10px;
+    gap: 10px;
+    height: 50px;
+    width: 250px;
+
+    & p {
+      font-size: 20px;
+    }
+  }
+
+  .currencyInnerStyle {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+  }
+
+  .currencyOuterStyle {
+    padding: 10px;
+    width: 100px;
+  }
+
+  .thank-you {
+    font-size: 20px;
   }
 }
