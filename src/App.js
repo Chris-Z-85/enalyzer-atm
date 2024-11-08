@@ -41,11 +41,10 @@ function App() {
           </h3>
         </button>
       </div>
-      <div className="Atm" ref={amountRef}>
+      <div className="atm" ref={amountRef}>
         <h1>Select amount</h1>
         <div className="input-box">
-          <p>£</p>
-          <p>{userInput.toString().replace(/^0+/, "")}</p>
+          <p>£&nbsp; {userInput.toString().replace(/^0+/, "")}</p>
         </div>
         <div className="keypad">
           {keys.map((key, index) => (
